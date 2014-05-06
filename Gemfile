@@ -10,3 +10,5 @@ gem 'devise'
 gem 'jquery-rails'
 
 gem 'turbolinks'
+
+gem 'uglifier'
