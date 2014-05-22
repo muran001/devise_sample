@@ -3,4 +3,11 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  ROLES = %w[admin editor banned]
+
+  def role? current_role
+    ROLES.include?(current_role.to_s)
+  end
+
 end
