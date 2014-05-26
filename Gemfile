@@ -11,4 +11,4 @@ gem 'jquery-rails'
 
 gem 'turbolinks'
 
-gem 'uglifier'
+gem 'cancancan'
