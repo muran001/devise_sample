@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ROLES = %w[admin editor banned]
+  ROLES = %w[admin editor reader banned]
 
   def role? current_role
     ROLES.include?(current_role.to_s)
